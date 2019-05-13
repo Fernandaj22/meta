@@ -64,3 +64,40 @@ html, body{
 		font-weight: bold;
 		font-size: .8em;
 	}
+
+#preguntas{
+	width: 100%;
+	height: 100%;
+	float: left;
+	position: relative;
+	background: white;
+	padding: 10px;
+	box-sizing: border-box;
+	display: none;
+}
+	#preguntas div{
+		float: left;
+		position: relative;
+	}
+
+#situacion{
+	width: 100%;
+	height: 100%;
+	float: left;
+	position: relative;
+	background: white;
+	padding: 10px;
+	box-sizing: border-box;
+	display: none;
+}
+
+#escenarios{
+	width: 100%;
+	height: 100%;
+	float: left;
+	position: relative;
+	background: white;
+	padding: 10px;
+	box-sizing: border-box;
+	display: none;
+}
