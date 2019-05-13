@@ -56,7 +56,7 @@ html, body{
 	#meta button{
 		width: 20%;
 		height: 30px;
-		margin-top: calc(25% - 20px);
+		margin-top: 10%;
 		border-radius: 5px;
 		background: #546de5;
 		border: none;
