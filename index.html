@@ -4,105 +4,276 @@
 	<title>Ingeniería de Software Avanzada</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
-	<link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Questrial|Fredoka+One" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 	<script type="text/javascript" src="js/functions.js"></script>
 </head>
-<body onload="aparecerMeta()">
+<body>
+
+	<div id="fondoModal"></div>
+	<div id="modal">
+		<div id="divIcono"></div>
+		<p id="txtModal"></p>
+		<button onclick="esconderModal()" id="btnModal">Aceptar</button>
+	</div>
 
 	<div id="contenido">
 		<div id="meta">
 			<div class="flex">
-				<h2>META:</h2>
+				<h2>META</h2>
 				<h1>Generar un esquema basado en estándares y políticas de calidad asegurando que los proyectos cumplan con las características de calidad establecidas y el ISO para el final del mes de julio 2019</h1>
 			</div>
-			<button id="btnCuestionario">Empezar cuestionario</button>
+			<button id="btnCuestionario" onclick="mostrarDiv('meta', 'preguntas')">Empezar cuestionario</button>
 		</div>
 
 		<div id="preguntas">
+
+			<h1>CUESTIONARIO:</h1>
 			<div>
-				<h2>¿Se cuentan con objetivos de negocio relacionados a la meta?</h2>
-				<input type="radio" name="" value="1"><span>Si</span>
-				<input type="radio" name="" value=".5"><span>En proceso</span>
-				<input type="radio" name="" value="0"><span>No</span>
+				<h2><span class="signo">1. ¿</span>Se cuentan con objetivos de negocio relacionados a la meta<span class="signo">?</span></h2>
+				
+				<label class="container">Sí
+					<input type="radio" name="p1" value="1">
+					<span class="checkmark radio"></span>
+				</label>
+				<label class="container">En proceso
+					<input type="radio" name="p1" value=".5">
+					<span class="checkmark radio"></span>
+				</label>
+
+				<label class="container">No
+					<input type="radio" name="p1" value="0">
+					<span class="checkmark radio"></span>
+				</label>
+			
 			</div>
 
 			<div>
-				<h2>¿En qué grado limitan los obstáculos tu meta?</h2>
-				<input type="radio" name="" value="1"><span>Alto</span>
-				<input type="radio" name="" value=".5"><span>Medio</span>
-				<input type="radio" name="" value="0"><span>Bajo</span>
+				<h2><span class="signo">2. ¿</span>En qué grado limitan los obstáculos tu meta<span class="signo">?</span></h2>
+
+				<label class="container">Alto
+					<input type="radio"  name="p2" value="1">
+					<span class="checkmark radio"></span>
+				</label>
+				<label class="container">Medio
+					<input type="radio"  name="p2" value=".5">
+					<span class="checkmark radio"></span>
+				</label>
+
+				<label class="container">Bajo
+					<input type="radio" name="p2" value="0">
+					<span class="checkmark radio"></span>
+				</label>
 			</div>
 
 			<div>
-				<h2>¿Qué tipo de recursos hacen falta para cumplir la meta?</h2>
-				<input type="checkbox" name="" value="1"><span>Recursos financieros</span>
-				<input type="checkbox" name="" value="1"><span>Recursos humanos</span>
-				<input type="checkbox" name="" value="1"><span>Recursos tecnológicos</span>
-				<input type="checkbox" name="" value="1"><span>Recursos materiales</span>
-				<input type="checkbox" name="" value="0"><span>Ninguno de los anteriores</span>
+				<h2><span class="signo">3. ¿</span>Qué tipo de recursos hacen falta para cumplir la meta<span class="signo">?</span></h2>
+				<label class="container">Recursos financieros
+					<input type="checkbox"  name="p3" value="1">
+					<span class="checkmark box"></span>
+				</label>
+				<label class="container">Recursos humanos
+					<input type="checkbox"  name="p3" value="1">
+					<span class="checkmark box"></span>
+				</label>
+
+				<label class="container">Recursos tecnológicos
+					<input type="checkbox" name="p3" value="1">
+					<span class="checkmark box"></span>
+				</label>
+
+				<label class="container">Recursos materiales
+					<input type="checkbox" name="p3" value="1">
+					<span class="checkmark box"></span>
+				</label>
+
+				<label class="container">Ninguno de los anteriores
+					<input type="checkbox" name="p3" value="0">
+					<span class="checkmark box"></span>
+				</label>
+				
 			</div>
 
 			<div>
-				<h2>¿Qué áreas están involucradas con el cumplimiento de la meta?</h2>
-				<input type="checkbox" name="" value="1"><span>Dirección</span>
-				<input type="checkbox" name="" value="1"><span>Gerencias</span>
-				<input type="checkbox" name="" value="1"><span>Oficinas de proyectos</span>
-				<input type="checkbox" name="" value="1"><span>Grupos de desarrollo</span>
-				<input type="checkbox" name="" value="0"><span>Ninguna de los anteriores</span>
+				<h2><span class="signo">4. ¿</span>Qué áreas están involucradas con el cumplimiento de la meta<span class="signo">?</span></h2>
+				<label class="container">Dirección
+					<input type="checkbox"  name="p4" value="1">
+					<span class="checkmark box"></span>
+				</label>
+				<label class="container">Gerencias
+					<input type="checkbox"  name="p4" value="1">
+					<span class="checkmark box"></span>
+				</label>
+
+				<label class="container">Oficinas de proyectos
+					<input type="checkbox" name="p4" value="1">
+					<span class="checkmark box"></span>
+				</label>
+
+				<label class="container">Grupos de desarrollo
+					<input type="checkbox" name="p4" value="1">
+					<span class="checkmark box"></span>
+				</label>
+
+				<label class="container">Ninguna de los anteriores
+					<input type="checkbox" name="p4" value="0">
+					<span class="checkmark box"></span>
+				</label>
+			</div>
+			
+			<div>
+				<h2><span class="signo">5. ¿</span>Alguna de estas actividades se están llevando a cabo<span class="signo">?</span></h2>
+				<label class="container">Capacitación del personal
+					<input type="checkbox"  name="p5" value="1">
+					<span class="checkmark box"></span>
+				</label>
+				<label class="container">Revisión constante de los estándares
+					<input type="checkbox"  name="p5" value="1">
+					<span class="checkmark box"></span>
+				</label>
+
+				<label class="container">Gestión del proyecto
+					<input type="checkbox" name="p5" value="1">
+					<span class="checkmark box"></span>
+				</label>
+
+				<label class="container">Desarrollo, implementación e integración del esquema con el proyecto actual
+					<input type="checkbox" name="p5" value="1">
+					<span class="checkmark box"></span>
+				</label>
+
+				<label class="container">Ninguna de los anteriores
+					<input type="checkbox" name="p5" value="0">
+					<span class="checkmark box"></span>
+				</label>
+			</div>
+			
+			<div>
+				<h2><span class="signo">6. </span> En caso de no llegar a cumplir la meta, ¿existe un plan de contingencia<span class="signo">?</span></h2>
+				
+				<label class="container">Sí
+					<input type="radio" name="p6" value="1">
+					<span class="checkmark radio"></span>
+				</label>
+				<label class="container">En proceso
+					<input type="radio" name="p6" value=".5">
+					<span class="checkmark radio"></span>
+				</label>
+
+				<label class="container">No
+					<input type="radio" name="p6" value="0">
+					<span class="checkmark radio"></span>
+				</label>
 			</div>
 
 			<div>
-				<h2>¿Alguna de estas actividades se están llevando a cabo?</h2>
-				<input type="checkbox" name="" value="1"><span>Capacitación del personal</span>
-				<input type="checkbox" name="" value="1"><span>Revisión constante de los estándares</span>
-				<input type="checkbox" name="" value="1"><span>Gestión del proyecto</span>
-				<input type="checkbox" name="" value="1"><span>Desarrollo, implementación e integración del esquema con el proyecto actual</span>
-				<input type="checkbox" name="" value="0"><span>Ninguna de los anteriores</span>
+				<h2><span class="signo">7. ¿</span>En qué nivel la meta puede dividirse para asegurar el éxito<span class="signo">?</span></h2>
+				<label class="container">Alto
+					<input type="radio" name="p7" value="1">
+					<span class="checkmark radio"></span>
+				</label>
+				<label class="container">Medio
+					<input type="radio" name="p7" value=".5">
+					<span class="checkmark radio"></span>
+				</label>
+
+				<label class="container">Bajo
+					<input type="radio" name="p7" value="0">
+					<span class="checkmark radio"></span>
+				</label>
 			</div>
 
 			<div>
-				<h2>En caso de no llegar a cumplir la meta, ¿existe un plan de contingencia?</h2>
-				<input type="radio" name="" value="1"><span>Si</span>
-				<input type="radio" name="" value=".5"><span>En proceso</span>
-				<input type="radio" name="" value="0"><span>No</span>
+				<h2><span class="signo">8. ¿</span>Qué factores externos influyen en el proceso de cumplir la meta<span class="signo">?</span></h2>
+				<label class="container">La actualización de los estándares
+					<input type="checkbox"  name="p8" value="1">
+					<span class="checkmark box"></span>
+				</label>
+				<label class="container">Los requerimientos de cada proyecto
+					<input type="checkbox"  name="p8" value="1">
+					<span class="checkmark box"></span>
+				</label>
+
+				<label class="container">Entorno del proyecto
+					<input type="checkbox" name="p8" value="1">
+					<span class="checkmark box"></span>
+				</label>
+
+				<label class="container">Ningún factor
+					<input type="checkbox" name="p8" value="0">
+					<span class="checkmark box"></span>
+				</label>
 			</div>
 
 			<div>
-				<h2>¿En qué nivel la meta puede dividirse para asegurar el éxito?</h2>
-				<input type="radio" name="" value="1"><span>Alto</span>
-				<input type="radio" name="" value=".5"><span>Medio</span>
-				<input type="radio" name="" value="0"><span>Bajo</span>
+				<h2> <span class="signo">9. </span> En caso de que la meta se cumpla, ¿se puede adaptar la meta a nuevos entornos<span class="signo">?</span></h2>
+				
+				<label class="container">Mucho
+					<input type="radio" name="p9" value="1">
+					<span class="checkmark radio"></span>
+				</label>
+				<label class="container">Poco
+					<input type="radio" name="p9" value=".5">
+					<span class="checkmark radio"></span>
+				</label>
+
+				<label class="container">Nulo
+					<input type="radio" name="p9" value="0">
+					<span class="checkmark radio"></span>
+				</label>
 			</div>
 
 			<div>
-				<h2>¿Qué factores externos influyen en el proceso de cumplir la meta?</h2>
-				<input type="checkbox" name="" value="1"><span>La actualización de los estándares</span>
-				<input type="checkbox" name="" value="1"><span>Los requerimeientos de cada proyecto</span>
-				<input type="checkbox" name="" value="1"><span>Entorno del proyecto</span>
-				<input type="checkbox" name="" value="0"><span>Ningún factor</span>
+				<h2><span class="signo">10. ¿</span>Cada cuánto tiempo tendría que renovarse la meta si la calidad se basa en los estándares del ISO<span>?</span></h2>
+				
+				<label class="container">Cada 10 años o cada que los estándares se actualicen
+					<input type="radio" name="p10" value="1">
+					<span class="checkmark radio"></span>
+				</label>
+				<label class="container">Cada que se realiza un nuevo proyecto
+					<input type="radio" name="p10" value=".5">
+					<span class="checkmark radio"></span>
+				</label>
+
+				<label class="container">No es necesario actualizarse
+					<input type="radio" name="p10" value="0">
+					<span class="checkmark radio"></span>
+				</label>
 			</div>
 
-			<div>
-				<h2>En caso de que la meta se cumpla, ¿se puede adaptar la meta a nuevos entornos?</h2>
-				<input type="radio" name="" value="1"><span>Mucho</span>
-				<input type="radio" name="" value=".5"><span>Poco</span>
-				<input type="radio" name="" value="0"><span>Nulo</span>
-			</div>
-
-			<div>
-				<h2>¿Cada cuánto tiempo tendría que renovarse la meta si la calidad se basa en los estándares del ISO?</h2>
-				<input type="radio" name="a" value="1"><span>Cada 10 años o cada que los estándres se actualicen</span>
-				<input type="radio" name="a" value=".5"><span>Cada que se realiza un nuevo proyecto</span>
-				<input type="radio" name="a" value="0"><span>No es necesario actualizarse</span>
-			</div>
+			<button onclick="validarInputs()">Siguiente</button>
 		</div>
 
 		<div id="situacion">
-			
+			<h1>Situación</h1>
 		</div>
 
 		<div id="escenarios"></div>
 	</div>
+
+	<script>
+
+		(function (){
+			let inputs = document.getElementsByTagName("input");
+			for (let index = 0; index < inputs.length; index++) {
+				if(inputs[index].checked){
+					inputs[index].checked = false;
+				}	
+			}
+		})();
+
+		cuestionario('p1', 0, 'r');
+		cuestionario('p2', 1, 'r');
+		cuestionario('p3', 2, 'c');
+		cuestionario('p4', 3, 'c');
+		cuestionario('p5', 4, 'c');
+		cuestionario('p6', 5, 'r');
+		cuestionario('p7', 6, 'r');
+		cuestionario('p8', 7, 'c');
+		cuestionario('p9', 8, 'r');
+		cuestionario('p10', 9, 'r');
+
+	</script>	
 
 </body>
 </html>
