@@ -13,12 +13,12 @@ function mostrarDiv(divEsconder, divMostrar){
     mostrar = document.getElementById(divMostrar);
 
     esconder.style.display = "none";
-    mostrar.style.display = "flex";
+    mostrar.style.display = "block";
 }
 
 //Arreglo con valor de respuesta de cada pregunta y variable con valor de puntaje total
-let valores = [];
-let puntaje = 0;
+var valores = [];
+var puntaje = 0;
 
 function cuestionario(inputName, posicion, tipoInput){
 
@@ -107,7 +107,8 @@ function validarInputs(){
         calcularPuntaje();
         btnModal = document.getElementById('btnModal');
         btnModal.addEventListener('click', mostrarDiv('preguntas', 'situacion'));
-        mostrarModal("Encuesta contestada exitosamente!", '<i class="fas fa-check-circle"></i>');
+        mostrarModal("¡Encuesta contestada exitosamente!", '<i class="fas fa-check-circle"></i>');
+        mostrarGraficas();
     }
     else{
         mostrarModal("Una o más preguntas faltan de contestar", '<i class="fas fa-exclamation-circle"></i>');
@@ -135,4 +136,38 @@ function esconderModal(){
     modal = document.getElementById('modal');
     modal.style.display = 'none';
 }
+
+function mostrarGraficas(){
+    var ctx = document.getElementById('myChart').getContext('2d');
+                console.log(valores[0]);
+                var myChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Red', 'Blue'],
+                        datasets: [{
+                            label: 'Resultados',
+                            data: [valores[0],1],
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(54, 162, 235, 0.2)'
+                            ],
+                            borderColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        }
+                    }
+                });
+}
+
 

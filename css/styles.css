@@ -103,7 +103,7 @@ html, body{
 	/* display: none; */
 	border-radius: 5px;
 }
-	#meta h2,  #preguntas h1{
+	#meta h2,  #preguntas h1, #situacion h1{
 		font-size: 2em;
 		color: rgba(0,0,0,.4);
 		/* margin-bottom: 10px; */
@@ -211,7 +211,7 @@ html, body{
 		margin-left: 5%;
 	}
 
-		#preguntas div h2{
+		#preguntas div h2, #situacion div h2{
 			font-weight: lighter;
 			color: rgba(0,0,0,.8);
 			margin-bottom: .7em;
@@ -351,6 +351,14 @@ html, body{
 	box-sizing: border-box;
 	display: none;
 }
+	.graficas{
+		width: 100%;
+		height: auto;
+		float: left;
+		position: relative;
+		padding: 10px;
+		box-sizing: border-box;
+	}
 
 #escenarios{
 	width: 100%;
