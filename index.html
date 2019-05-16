@@ -246,13 +246,80 @@
 
 		<div id="situacion">
 			<h1>SITUACIÓN:</h1>
+
 			<div class="flex graficas" id="graficas">
+				<p>INTERPRETACIÓN DE VALORES DE LA TABLA:</p>
+				<div class="flex-h">
+					<h2><span class="signo">1 </span><br>Respuesta ideal para tu empresa</h2>
+					<h2><span class="signo">0.5 </span><br>Respuesta neutral para tu empresa</h2>
+					<h2><span class="signo">0 </span><br>Respuesta no favorable a tu empresa</h2>
+				</div>
+
+
+
 				<h2><span class="signo">1. ¿</span>Se cuentan con objetivos de negocio relacionados a la meta<span class="signo">?</span></h2>
-				<canvas id="myChart"></canvas>
+				<p>Se debe de contar con objetivos relacionados a la meta para una situación ideal.</p>
+				<canvas id="bar-chart"></canvas>
+
+				<h2><span class="signo">2. ¿</span>En qué grado limitan los obstáculos a tu meta<span class="signo">?</span></h2>
+				<p>Los obstáculos deben ser mínimos para cumplir la meta.</p>
+				<canvas id="bar-chart2"></canvas>
+
+				<h2><span class="signo">3. ¿</span>Qué tipo de recursos hacen falta para cumplir la meta<span class="signo">?</span></h2>
+				<p>Los recursos financieros, humanos, tecnológicos y materiales deben de administrarse con el fin de no perjudicar el proceso del cumplimiento de la meta.</p>
+				<canvas id="bar-chart3"></canvas>
+
+				<h2><span class="signo">4. ¿</span>Qué áreas están involucradas con el cumplimiento de la meta<span class="signo">?</span></h2>
+				<p>En su mayoría, todas las áreas deben involucrarse en el cumplimiento de la meta orientada a calidad.</p>
+				<canvas id="bar-chart4"></canvas>
+
+				<h2><span class="signo">5. ¿</span>Alguna de estas actividades se están llevando a cabo<span class="signo">?</span></h2>
+				<p>La capacitación de personal, revisión constante de los estándares, gestión del proyecto, así como el desarrollo, implementación e integración del esquema con el proyecto, son actividades principales para llevarse a cabo y llegar al objetivo final de la meta.</p>
+				<canvas id="bar-chart5"></canvas>
+
+				<h2><span class="signo">6. </span> En caso de no llegar a cumplir la meta, ¿existe un plan de contingencia<span class="signo">?</span></h2>
+				<p>Contar con un plan de contingencia deberá ser indispensable por si la meta no llega a cumplirse.</p>
+				<canvas id="bar-chart6"></canvas>
+
+				<h2><span class="signo">7. ¿</span>En qué nivel la meta puede dividirse para asegurar el éxito<span class="signo">?</span></h2>
+				<p>Para facilitar las tareas del cumplimiento de la meta, dividirla es una opción viable.</p>
+				<canvas id="bar-chart7"></canvas>
+
+				<h2><span class="signo">8. ¿</span>Qué factores externos influyen en el proceso de cumplir la meta<span class="signo">?</span></h2>
+				<p>Los factores a cumplir la meta deben tenerse bajo control, sea cuáles sean los factores.</p>
+				<canvas id="bar-chart8"></canvas>
+
+				<h2> <span class="signo">9. </span> En caso de que la meta se cumpla, ¿se puede adaptar la meta a nuevos entornos<span class="signo">?</span></h2>
+				<p>La meta, a pesar de ser enfocado a un sólo rubro, debe de poder adaptarse a diversos proyectos.</p>
+				<canvas id="bar-chart9"></canvas>
+
+				<h2><span class="signo">10. ¿</span>Cada cuánto tiempo tendría que renovarse la meta si la calidad se basa en los estándares del ISO<span>?</span></h2>
+				<p>Cada 10 años o cada que los estándares se actualicen debe de renovarse la meta basada en el ISO.</p>
+				<canvas id="bar-chart10"></canvas>
 			</div>
+			<button onclick="mostrarEscenarios()">Siguiente</button>
 		</div>
 
-		<div id="escenarios"></div>
+		<div id="escenarios">
+			<h1>RESULTADO (MÉTRICAS):</h1>
+
+			<div class="flex">
+				<h2>CALIFICACIÓN:</h2>
+				<div class="scale-in-center circle">
+					<p></p>
+				</div>
+
+				<h2>PUNTAJE:</h2>
+				<div class="scale-in-center circle">
+					<p></p>
+				</div>
+
+				<h2>INTERPRETACIÓN:</h2>
+				<h3></h3>
+			</div>
+
+			<button onclick="refreshPage()">Volver a contestar cuestionario</button>
+		</div>
 	</div>
 
 	<script>

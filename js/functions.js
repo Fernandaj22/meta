@@ -138,36 +138,278 @@ function esconderModal(){
 }
 
 function mostrarGraficas(){
-    var ctx = document.getElementById('myChart').getContext('2d');
-                console.log(valores[0]);
-                var myChart = new Chart(ctx, {
-                    type: 'bar',
-                    data: {
-                        labels: ['Red', 'Blue'],
-                        datasets: [{
-                            label: 'Resultados',
-                            data: [valores[0],1],
-                            backgroundColor: [
-                                'rgba(255, 99, 132, 0.2)',
-                                'rgba(54, 162, 235, 0.2)'
-                            ],
-                            borderColor: [
-                                'rgba(255, 99, 132, 1)',
-                                'rgba(54, 162, 235, 1)'
-                            ],
-                            borderWidth: 1
-                        }]
-                    },
-                    options: {
-                        scales: {
-                            yAxes: [{
-                                ticks: {
-                                    beginAtZero: true
-                                }
-                            }]
-                        }
-                    }
-                });
+    valor= valores[0];
+    valor2= valores[1];
+    valor3= valores[2];
+    valor4= valores[3];
+    valor5= valores[4];
+    valor6= valores[5];
+    valor7= valores[6];
+    valor8= valores[7];
+    valor9= valores[8];
+    valor10= valores[9];
+
+    document.getElementById("bar-chart").height=100;
+    document.getElementById("bar-chart2").height=100;
+    document.getElementById("bar-chart3").height=100;
+    document.getElementById("bar-chart4").height=100;
+    document.getElementById("bar-chart5").height=100;
+    document.getElementById("bar-chart6").height=100;
+    document.getElementById("bar-chart7").height=100;
+    document.getElementById("bar-chart8").height=100;
+    document.getElementById("bar-chart9").height=100;
+    document.getElementById("bar-chart10").height=100;
+
+    new Chart(document.getElementById("bar-chart"), {
+        type: 'bar',
+        data: {
+          labels: ["Situación actual de tu empresa", "Situación ideal de una empresa"],
+          datasets: [
+            {
+              label: "Situación",
+              data: [valor, 1],
+              backgroundColor: ["#FF7F7F", "#7FFF8E"]
+            }
+          ]
+        },
+        options: {
+          legend: { display: false },
+          scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true,
+                    max: 1
+                }
+            }]
+          }
+        }
+    });
+
+    new Chart(document.getElementById("bar-chart2"), {
+        type: 'bar',
+        data: {
+          labels: ["Situación actual de tu empresa", "Situación ideal de una empresa"],
+          datasets: [
+            {
+              label: "Situación",
+              data: [valor2, 1],
+              backgroundColor: ["#FF7F7F", "#7FFF8E"]
+            }
+          ]
+        },
+        options: {
+          legend: { display: false },
+          scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true,
+                    max: 1
+                }
+            }]
+          }
+        }
+    });
+    new Chart(document.getElementById("bar-chart3"), {
+        type: 'bar',
+        data: {
+          labels: ["Situación actual de tu empresa", "Situación ideal de una empresa"],
+          datasets: [
+            {
+              label: "Situación",
+              data: [valor3, 1],
+              backgroundColor: ["#FF7F7F", "#7FFF8E"]
+            }
+          ]
+        },
+        options: {
+          legend: { display: false },
+          scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true,
+                    max: 1
+                }
+            }]
+          }
+        }
+    });
+    new Chart(document.getElementById("bar-chart4"), {
+        type: 'bar',
+        data: {
+          labels: ["Situación actual de tu empresa", "Situación ideal de una empresa"],
+          datasets: [
+            {
+              label: "Situación",
+              data: [valor4, 1],
+              backgroundColor: ["#FF7F7F", "#7FFF8E"]
+            }
+          ]
+        },
+        options: {
+          legend: { display: false },
+          scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true,
+                    max: 1
+                }
+            }]
+          }
+        }
+    });
+    new Chart(document.getElementById("bar-chart5"), {
+        type: 'bar',
+        data: {
+          labels: ["Situación actual de tu empresa", "Situación ideal de una empresa"],
+          datasets: [
+            {
+              label: "Situación",
+              data: [valor5, 1],
+              backgroundColor: ["#FF7F7F", "#7FFF8E"]
+            }
+          ]
+        },
+        options: {
+          legend: { display: false },
+          scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true,
+                    max: 1
+                }
+            }]
+          }
+        }
+    });
+    new Chart(document.getElementById("bar-chart6"), {
+        type: 'bar',
+        data: {
+          labels: ["Situación actual de tu empresa", "Situación ideal de una empresa"],
+          datasets: [
+            {
+              label: "Situación",
+              data: [valor6, 1],
+              backgroundColor: ["#FF7F7F", "#7FFF8E"]
+            }
+          ]
+        },
+        options: {
+          legend: { display: false },
+          scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true,
+                    max: 1
+                }
+            }]
+          }
+        }
+    });
+    new Chart(document.getElementById("bar-chart7"), {
+        type: 'bar',
+        data: {
+          labels: ["Situación actual de tu empresa", "Situación ideal de una empresa"],
+          datasets: [
+            {
+              label: "Situación",
+              data: [valor7, 1],
+              backgroundColor: ["#FF7F7F", "#7FFF8E"]
+            }
+          ]
+        },
+        options: {
+          legend: { display: false },
+          scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true,
+                    max: 1
+                }
+            }]
+          }
+        }
+    });
+    new Chart(document.getElementById("bar-chart8"), {
+        type: 'bar',
+        data: {
+          labels: ["Situación actual de tu empresa", "Situación ideal de una empresa"],
+          datasets: [
+            {
+              label: "Situación",
+              data: [valor8, 1],
+              backgroundColor: ["#FF7F7F", "#7FFF8E"]
+            }
+          ]
+        },
+        options: {
+          legend: { display: false },
+          scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true,
+                    max: 1
+                }
+            }]
+          }
+        }
+    });
+    new Chart(document.getElementById("bar-chart9"), {
+        type: 'bar',
+        data: {
+          labels: ["Situación actual de tu empresa", "Situación ideal de una empresa"],
+          datasets: [
+            {
+              label: "Situación",
+              data: [valor9, 1],
+              backgroundColor: ["#FF7F7F", "#7FFF8E"]
+            }
+          ]
+        },
+        options: {
+          legend: { display: false },
+          scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true,
+                    max: 1
+                }
+            }]
+          }
+        }
+    });
+    new Chart(document.getElementById("bar-chart10"), {
+        type: 'bar',
+        data: {
+          labels: ["Situación actual de tu empresa", "Situación ideal de una empresa"],
+          datasets: [
+            {
+              label: "Situación",
+              data: [valor10, 1],
+              backgroundColor: ["#FF7F7F", "#7FFF8E"]
+            }
+          ]
+        },
+        options: {
+          legend: { display: false },
+          scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true,
+                    max: 1
+                }
+            }]
+          }
+        }
+    });
 }
 
+function mostrarEscenarios(){
+    btnModal = document.getElementById('btnModal');
+    btnModal.addEventListener('click', mostrarDiv('situacion', 'escenarios'));
+
+}
+
+function refreshPage(){
+    location.reload();
+}
 
