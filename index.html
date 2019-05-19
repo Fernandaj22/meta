@@ -4,7 +4,7 @@
 	<title>Ingeniería de Software Avanzada</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
-	<link href="https://fonts.googleapis.com/css?family=Questrial|Fredoka+One" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Questrial|Fredoka+One" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
 	<script type="text/javascript" src="js/functions.js"></script>
@@ -31,7 +31,7 @@
 			<h1>CUESTIONARIO:</h1>
 			<div>
 				<h2><span class="signo">1. ¿</span>Se cuentan con objetivos de negocio relacionados a la meta<span class="signo">?</span></h2>
-				
+
 				<label class="container">Sí
 					<input type="radio" name="p1" value="1">
 					<span class="checkmark radio"></span>
@@ -45,14 +45,14 @@
 					<input type="radio" name="p1" value="0">
 					<span class="checkmark radio"></span>
 				</label>
-			
+
 			</div>
 
 			<div>
 				<h2><span class="signo">2. ¿</span>En qué grado limitan los obstáculos tu meta<span class="signo">?</span></h2>
 
 				<label class="container">Alto
-					<input type="radio"  name="p2" value="1">
+					<input type="radio"  name="p2" value="0">
 					<span class="checkmark radio"></span>
 				</label>
 				<label class="container">Medio
@@ -61,7 +61,7 @@
 				</label>
 
 				<label class="container">Bajo
-					<input type="radio" name="p2" value="0">
+					<input type="radio" name="p2" value="1">
 					<span class="checkmark radio"></span>
 				</label>
 			</div>
@@ -91,7 +91,7 @@
 					<input type="checkbox" name="p3" value="0">
 					<span class="checkmark box"></span>
 				</label>
-				
+
 			</div>
 
 			<div>
@@ -120,7 +120,7 @@
 					<span class="checkmark box"></span>
 				</label>
 			</div>
-			
+
 			<div>
 				<h2><span class="signo">5. ¿</span>Alguna de estas actividades se están llevando a cabo<span class="signo">?</span></h2>
 				<label class="container">Capacitación del personal
@@ -147,10 +147,10 @@
 					<span class="checkmark box"></span>
 				</label>
 			</div>
-			
+
 			<div>
 				<h2><span class="signo">6. </span> En caso de no llegar a cumplir la meta, ¿existe un plan de contingencia<span class="signo">?</span></h2>
-				
+
 				<label class="container">Sí
 					<input type="radio" name="p6" value="1">
 					<span class="checkmark radio"></span>
@@ -207,7 +207,7 @@
 
 			<div>
 				<h2> <span class="signo">9. </span> En caso de que la meta se cumpla, ¿se puede adaptar la meta a nuevos entornos<span class="signo">?</span></h2>
-				
+
 				<label class="container">Mucho
 					<input type="radio" name="p9" value="1">
 					<span class="checkmark radio"></span>
@@ -225,7 +225,7 @@
 
 			<div>
 				<h2><span class="signo">10. ¿</span>Cada cuánto tiempo tendría que renovarse la meta si la calidad se basa en los estándares del ISO<span>?</span></h2>
-				
+
 				<label class="container">Cada 10 años o cada que los estándares se actualicen
 					<input type="radio" name="p10" value="1">
 					<span class="checkmark radio"></span>
@@ -306,16 +306,16 @@
 			<div class="flex">
 				<h2>CALIFICACIÓN:</h2>
 				<div class="scale-in-center circle">
-					<p></p>
+					<p id="puntaje"></p>
 				</div>
 
-				<h2>PUNTAJE:</h2>
+				<h2>PORCENTAJE:</h2>
 				<div class="scale-in-center circle">
-					<p></p>
+					<p id="porcentaje"></p>
 				</div>
 
 				<h2>INTERPRETACIÓN:</h2>
-				<h3></h3>
+				<h3 id="interpretacion"></h3>
 			</div>
 
 			<button onclick="refreshPage()">Volver a contestar cuestionario</button>
@@ -329,7 +329,7 @@
 			for (let index = 0; index < inputs.length; index++) {
 				if(inputs[index].checked){
 					inputs[index].checked = false;
-				}	
+				}
 			}
 		})();
 
@@ -343,7 +343,7 @@
 		cuestionario('p8', 7, 'c');
 		cuestionario('p9', 8, 'r');
 		cuestionario('p10', 9, 'r');
-	</script>	
+	</script>
 
 </body>
 </html>

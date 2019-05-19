@@ -41,7 +41,7 @@ function cuestionario(inputName, posicion, tipoInput){
                         for(let j = 0; j < elementos.length; j++){
                             if(elementos[j].checked){
                                 elementos[j].checked = false;
-                            }	
+                            }
                         }
                         this.checked = true;
                         valores[posicion] = 0;
@@ -68,14 +68,28 @@ function puntajeCheckBox(){
     let arreglo = [2, 3, 4, 7];
     for (let index = 0; index < arreglo.length; index++) {
         let pos = arreglo[index];
-        if(valores[pos] != 0){
-            if(valores[pos] > 0 && valores[pos] < 3){
-                valores[pos] = .5;
-            }
-            if(valores[pos] >=3){
-                valores[pos] = 1;
-            }
+        if (pos == 2 || pos == 7){
+          if(valores[pos] != 0){
+            console.log("Entro");
+              if(valores[pos] > 0 && valores[pos] < 3){
+                  valores[pos] = .5;
+              } else if (valores[pos] >=3){
+                  valores[pos] = 0;
+              }
+          } else {
+            valores[pos] = 1;
+          }
+        } else {
+          if(valores[pos] != 0){
+              if(valores[pos] > 0 && valores[pos] < 3){
+                  valores[pos] = .5;
+              }
+              if(valores[pos] >=3){
+                  valores[pos] = 1;
+              }
+          }
         }
+
     }
 }
 
@@ -96,7 +110,7 @@ function validarInputs(){
             if(elementos[i].checked){
                 bandera = true;
             }
-        }    
+        }
         if(bandera){
             cont++;
         }
@@ -119,7 +133,7 @@ function validarInputs(){
 function mostrarModal(texto, icono){
     fondoModal = document.getElementById('fondoModal');
     fondoModal.style.display = 'block';
-    // fondoModal.addEventListener('click',esconderModal);
+    fondoModal.addEventListener('click',esconderModal);
 
     modal = document.getElementById('modal');
     divIcono = document.getElementById('divIcono');
@@ -132,7 +146,7 @@ function mostrarModal(texto, icono){
 function esconderModal(){
     fondoModal = document.getElementById('fondoModal');
     fondoModal.style.display = 'none';
-    
+
     modal = document.getElementById('modal');
     modal.style.display = 'none';
 }
@@ -404,12 +418,52 @@ function mostrarGraficas(){
 }
 
 function mostrarEscenarios(){
+    var porcentaje;
+    var interpretacion;
     btnModal = document.getElementById('btnModal');
     btnModal.addEventListener('click', mostrarDiv('situacion', 'escenarios'));
+    if (puntaje <= 5){
+      porcentaje = 50;
+    } else if (puntaje <= 6 && puntaje >= 5.5) {
+      porcentaje = 60;
+    } else if (puntaje <= 7 && puntaje >= 6.5) {
+      porcentaje = 70
+    } else if (puntaje <= 8 && puntaje >= 7.5) {
+      porcentaje = 80;
+    } else if (puntaje <= 9 && puntaje >= 8.5) {
+      porcentaje = 90;
+    } else if (puntaje <= 10 && puntaje >= 9.5) {
+      porcentaje = 100;
+    }
+
+    switch (porcentaje) {
+      case 50:
+        interpretacion = "La calidad es casi nula o nula, los criterios SMART son cumplidos ineficientemente o no existen.";
+        break;
+      case 60:
+        interpretacion = "Los criterios SMART pueden existir, pero requieren mayor desarrollo para asegurar una calidad recomendada.";
+        break;
+      case 70:
+        interpretacion = "Los criterios SMART no son suficientes para respaldar el cumplimiento de la meta.";
+        break;
+      case 80:
+        interpretacion = "La calidad es media, sin embargo, existe la oportunidad de crecimiento y mejora continua.";
+        break;
+      case 90:
+        interpretacion = "La calidad es alta, en su mayoría, sin embargo, existen aspectos que requieren de mayor revisión para asegurar la calidad.";
+        break;
+      case 100:
+        interpretacion = "Cumple la meta de acuerdo a los criterios SMART. La calidad es la óptima para llevar a cabo sus proyectos.";
+        break;
+      default:
+        interpretacion = "Los criterios SMART no son suficientes para respaldar el cumplimiento de la meta.";
+    }
+    document.getElementById("puntaje").innerHTML=puntaje;
+    document.getElementById("porcentaje").innerHTML=porcentaje+"%";
+    document.getElementById("interpretacion").innerHTML=interpretacion;
 
 }
 
 function refreshPage(){
     location.reload();
 }
-
