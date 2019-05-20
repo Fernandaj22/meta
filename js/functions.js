@@ -65,7 +65,7 @@ function cuestionario(inputName, posicion, tipoInput){
 }
 
 function puntajeCheckBox(){
-    let arreglo = [2, 3, 4, 7];
+    let arreglo = [2, 3, 4];
     for (let index = 0; index < arreglo.length; index++) {
         let pos = arreglo[index];
         if (pos == 2 || pos == 7){
